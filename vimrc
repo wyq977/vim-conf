@@ -317,20 +317,6 @@ let g:syntastic_mode_map = {
 " | Helper Functions                                                   |
 " ----------------------------------------------------------------------
 
-function! GetGitBranchName()
-
-    let branchName = ""
-
-    if exists("g:loaded_fugitive")
-        let branchName = "[" . fugitive#head() . "]"
-    endif
-
-    return branchName
-
-endfunction
-
-" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
 function! PrettyPrint()
 
     if ( &filetype == 'json' && (has('python3') || has('python')) )
@@ -699,7 +685,7 @@ highlight User1
 set statusline=
 set statusline+=%1*            " User1 highlight
 set statusline+=\ [%n]         " Buffer number
-set statusline+=\ %{GetGitBranchName()}        " Git branch name
+set statusline+=\ %{FugitiveHead()}        " Git branch name
 set statusline+=\ [%f]         " File path
 set statusline+=%m             " Modified flag
 set statusline+=%r             " Readonly flag
