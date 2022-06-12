@@ -1,8 +1,10 @@
-## Vim configuration and plugins
+# Vim configuration and plugins
 
 Configuration and plugins for Vim
 
-bash -c "$(curl -LsS https://raw.github.com/wyq977/dotfiles/master/src/os/setup.sh)"`
+## Install
+
+Run the following script:
 
 ```bash
 git clone --recurse-submodules git@github.com:wyq977/vim-conf.git
